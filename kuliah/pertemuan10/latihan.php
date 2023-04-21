@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '', 'pw_a22100002');
@@ -98,5 +97,4 @@ $mahasiswa = $rows;
 
 </body>
 
->>>>>>> ecadcc6a57542f6e949feccb17f167d7955bec9c
 </html>
