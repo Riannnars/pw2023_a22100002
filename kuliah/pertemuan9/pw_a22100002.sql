@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Waktu pembuatan: 21 Apr 2023 pada 14.40
+=======
+-- Waktu pembuatan: 20 Apr 2023 pada 15.49
+>>>>>>> ecadcc6a57542f6e949feccb17f167d7955bec9c
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -37,6 +41,7 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+<<<<<<< HEAD
 -- Dumping data untuk tabel `mahasiswa`
 --
 
@@ -46,6 +51,8 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALU
 (3, 'Ronaldo Efendi', 'A22100005', 'ronaldoefendi876@gmail.com', 'Teknik Informatika', 'ronaldo.jpg');
 
 --
+=======
+>>>>>>> ecadcc6a57542f6e949feccb17f167d7955bec9c
 -- Indexes for dumped tables
 --
 
@@ -63,7 +70,11 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> ecadcc6a57542f6e949feccb17f167d7955bec9c
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
