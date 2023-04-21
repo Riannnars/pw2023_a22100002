@@ -1,20 +1,7 @@
 <?php
+require 'functions.php';
 
-$conn = mysqli_connect('localhost', 'root', '', 'pw_a22100002');
-
-
-$result = mysqli_query($conn, "SELECT *FROM mahasiswa");
-
-
-//mysqli_fetch_row($result);
-//mysqli_fetch_assoc($result);
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-
-
-$mahasiswa = $rows;
+$mahasiswa = query("SELECT *FROM mahasiswa");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +20,7 @@ $mahasiswa = $rows;
     <tr>
       <th>#</th>
       <th>Gambar</th>
-      <th>NRP</th>
       <th>Nama</th>
-      <th>Email</th>
-      <th>Jurusan</th>
       <th>Aksi</th>
     </tr>
     <?php $i = 1;
@@ -44,17 +28,13 @@ $mahasiswa = $rows;
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="img/<?= $m['gambar']; ?>" width="50"></td>
-        <td><?= $m['nrp']; ?></td>
         <td><?= $m['nama']; ?></td>
-        <td><?= $m['email']; ?></td>
-        <td><?= $m['jurusan']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="">hapus</a>
+          <a href="detail.php?id=<?= $m['id']; ?>">lihat detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
   </table>
-
 </body>
 
 </html>

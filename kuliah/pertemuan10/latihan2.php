@@ -1,20 +1,7 @@
 <?php
+require 'functions.php';
 
-$conn = mysqli_connect('localhost', 'root', '', 'pw_a22100002');
-
-
-$result = mysqli_query($conn, "SELECT *FROM mahasiswa");
-
-
-//mysqli_fetch_row($result);
-//mysqli_fetch_assoc($result);
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-
-
-$mahasiswa = $rows;
+$mahasiswa = query("SELECT *FROM mahasiswa");
 ?>
 <!DOCTYPE html>
 <html lang="en">
